@@ -58,16 +58,6 @@ Pick something playful and simple:
 At least one endpoint must **not** depend on the external API (e.g., `/transform`, `/stats`).
 
 ---
-
-## README checklist
-
-* Project description & chosen external API.
-* Setup: Python version, virtualenv, `pip install -r requirements.txt`.
-* Run: `FLASK_APP=app.py flask run` (or `python app.py`).
-* Endpoints with examples (curl + sample responses).
-* Notes on error handling and any caching.
-
----
 ## Evaluation Criteria (100 pts)
 
 | Criterion                        | Points | Description |
