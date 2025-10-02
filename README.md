@@ -68,11 +68,34 @@ At least one endpoint must **not** depend on the external API (e.g., `/transform
 * Notes on error handling and any caching.
 
 ---
+## Evaluation Criteria (100 pts)
 
-## Grading rubric (100 pts)
+| Criterion                        | Points | Description |
+|----------------------------------|--------|-------------|
+| Endpoints                        | 30     | At least 3 endpoints are implemented; at least one does not depend on the external API. Endpoints use correct HTTP methods and return proper status codes. |
+| Architecture & OOP               | 25     | Clear N-tier architecture (Routes/Controllers → Services → Repositories). Service and Repository layers use classes with well-defined responsibilities. |
+| External API integration         | 15     | External API is integrated through the Repository layer, resilient to timeouts or errors. Proper abstraction is applied. |
+| Error handling & logging         | 15     | Custom exceptions and error mapping to JSON responses with appropriate status codes. Logs are informative and helpful for debugging. |
+| Code quality & documentation     | 15     | Code is clean, readable, and uses typing where appropriate. A `PLEASE-README.md` is provided with clear instructions, examples of usage, and endpoint documentation. |
 
-* **Endpoints (30 pts):** ≥3 endpoints; at least one independent of external API; correct HTTP methods and status codes.
-* **Architecture & OOP (25 pts):** Clear separation of layers; abstractions; classes well‑designed.
-* **External API integration (15 pts):** Repository encapsulates HTTP; resilient to errors/timeouts.
-* **Error handling & logging (15 pts):** Custom exceptions, mapped responses, sensible logs.
-* **Code quality & docs (15 pts):** Clean code, typing where useful, README clarity.
+---
+
+### Git Requirements
+
+- ✅ Use Git from the start of the project.  
+- ✅ Commit at **meaningful milestones** (e.g., project setup, external API integration, first endpoint, error handling, final refactor).  
+- ✅ Use **meaningful commit messages** that clearly describe what was implemented or changed.  
+
+---
+
+### README and Usability (Required)
+
+A separate `README.md` (not this lab instruction file) must be included. It should:
+
+- Clearly explain what the project does and which external API was chosen.  
+- Provide **step-by-step instructions on how to run the application** (Python version, virtualenv, dependencies (`pip install -r requirements.txt`), and commands (Run: `FLASK_APP=app.py flask run` (or `python app.py`)). 
+- Document the available endpoints with examples (e.g., curl requests and sample responses).  
+- Include notes on error handling, logging, and any optional features (e.g., caching).  
+
+⚠️ **Important:** Do not forget to include instructions on how to run the code. This will be explicitly graded.  
+
